@@ -11,7 +11,7 @@ layers:
   - '7'
   - '8'
   - '9'
-  - '0'
+  - ZMK Studio
   - ((ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE)))
   - TAB
   - Q
