@@ -3,8 +3,8 @@ name: ZMK Firmware
 on:
   push:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 1 */2 *' # run every two months to keep artifacts from expiring
+  # schedule:
+  #   - cron: '0 0 1 */2 *' # run every two months to keep artifacts from expiring
 
 jobs:
   convert-and-store-keymap:
