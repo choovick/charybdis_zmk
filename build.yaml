@@ -30,6 +30,7 @@ include:
     format: bt
     artifact-name: charybdis_qwerty_right
     snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
 
   # # Colemak DH BT
   # - board: nice_nano_v2
