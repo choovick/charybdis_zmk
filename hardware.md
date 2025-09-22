@@ -29,4 +29,6 @@
 <https://github.com/victorlucachi/Elite-C-holder>
 
 
+## PMW3360 sensor driver
 
+<https://github.com/george-norton/zmk-driver-pmw3360>
