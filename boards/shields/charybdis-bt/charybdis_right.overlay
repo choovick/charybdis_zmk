@@ -27,18 +27,4 @@
                 ;
 };
 
-&spi0 {
-    status = "okay";
-};
 
-&trackball {
-    status = "okay";
-};
-
-// https://github.com/george-norton/zmk-driver-pmw3360
-/ {
-  trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-  };
-};
