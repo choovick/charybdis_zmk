@@ -1,3 +1,6 @@
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -39,6 +42,7 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>;
     };
 };
 

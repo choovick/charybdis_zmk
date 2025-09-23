@@ -4,13 +4,15 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: george-norton
       url-base: https://github.com/george-norton
+    - name: garrettfaucher
+      url-base: https://github.com/garrettfaucher
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: feat/pointers-with-input-processors
       import: app/west.yml
     - name: zmk-driver-pmw3360
-      remote: george-norton
-      revision: main
+      remote: garrettfaucher
+      revision: invert-x-y
   self:
     path: config
