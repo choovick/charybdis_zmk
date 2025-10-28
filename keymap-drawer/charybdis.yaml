@@ -1,4 +1,4 @@
 layout: {zmk_keyboard: charybdis}
 layers:
-  BASE: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', TAB, Q, W, E, R, T, Y, U, I, O, P, '=', LSHFT, A, S, D, F, G, H, J, K, L, ;, '''', LCTRL, Z,
-    X, C, V, B, N, M, ',', ., /, LALT, LGUI, SPACE, TAB, RET, BSPC, LALT, LCTRL, RSHFT]
+  BASE: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ZMK Studio, TAB, Q, W, E, R, T, Y, U, I, O, P, '=', LSHFT, A, S, D, F, G, H, J, K, L, ;, '''', LCTRL,
+    Z, X, C, V, B, N, M, ',', ., /, LALT, LGUI, SPACE, TAB, RET, BSPC, LALT, LCTRL, RSHFT]
