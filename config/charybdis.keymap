@@ -80,6 +80,7 @@
         y-input-code = <INPUT_REL_WHEEL>;
         scale-multiplier = <1>;
         scale-divisor = <2>;
+        y-invert;
     };
 
     sniping_listener {
