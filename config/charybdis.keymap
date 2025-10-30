@@ -5,7 +5,7 @@
 
 / {
     behaviors {
-        LT: LT {
+        blt: blt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -95,9 +95,9 @@
     &kp LSFT      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp RSFT
 // ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
 //                                          ╭─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────╮
-                                             &mo 1         &gui_ctrlb    &kp LALT          &LT 3 BSPC    &LT 4 SPACE
+                                             &mo 1         &gui_ctrlb    &kp LALT          &blt 3 BSPC   &blt 4 SPACE
 //                                          ╰─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────╯
-                                                           &kp RCTRL     &LT 2             &kp RET
+                                                           &kp RCTRL     &mo 2             &kp RET
 //                                                        ╰─────────────┴─────────────╯   ╰─────────────╯
             >;
             label = "BASE";
