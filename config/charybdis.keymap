@@ -4,15 +4,38 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        // Ctrl+Alt+Cmd macro
+        CAC: CAC {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LC(LA(LG(MACRO_PLACEHOLDER)))>;
+        };
+
+        // Ctrl+Shift+Alt macro
+        CSA: CSA {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LC(LS(LA(MACRO_PLACEHOLDER)))>;
+        };
+
+        // Ctrl+Alt macro
+        CA: CA {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LC(LA(MACRO_PLACEHOLDER))>;
+        };
+    };
+
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 1>;
+        layers = <0 1 2>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <3>;
-        scale-divisor = <2>;
+        scale-multiplier = <6>;
+        scale-divisor = <5>;
     };
 
     combos {
@@ -80,6 +103,26 @@
 //                                                        ╰─────────────┴─────────────╯   ╰─────────────╯
             >;
             label = "POINTER";
+        };
+
+        lower_layer {
+            bindings = <
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    &kp ESC       &CAC F1       &CAC F2       &CAC F3       &CAC F4       &CAC F5           &CAC F6       &CAC F7       &CAC F8       &CAC F9       &CAC F10      &trans
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &none         &CA Q         &CA W         &CA E         &CA R         &CA T             &CA Y         &CA U         &CA I         &CA O         &CAC F11      &CAC F12
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &kp CAPS      &CA A         &CA S         &CA D         &CA F         &CA G             &CA H         &CA J         &CA K         &CA L         &CA SEMI      &CA SQT
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &trans        &CA Z         &CA X         &CA C         &CA V         &CSA F1           &kp LS(LG(GRAVE)) &kp LG(GRAVE) &CA COMMA     &CA DOT       &CA FSLH      &trans
+// ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
+//                                          ╭─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────╮
+                                               &trans        &trans        &trans            &trans        &trans
+//                                          ╰─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────╯
+                                                             &trans        &trans            &trans
+//                                                        ╰─────────────┴─────────────╯   ╰─────────────╯
+            >;
+            label = "LOWER";
         };
     };
 };

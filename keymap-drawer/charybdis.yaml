@@ -59,6 +59,63 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  LOWER:
+  - ESC
+  - '&CAC F1'
+  - '&CAC F2'
+  - '&CAC F3'
+  - '&CAC F4'
+  - '&CAC F5'
+  - '&CAC F6'
+  - '&CAC F7'
+  - '&CAC F8'
+  - '&CAC F9'
+  - '&CAC F10'
+  - {t: ▽, type: trans}
+  - ''
+  - '&CA Q'
+  - '&CA W'
+  - '&CA E'
+  - '&CA R'
+  - '&CA T'
+  - '&CA Y'
+  - '&CA U'
+  - '&CA I'
+  - '&CA O'
+  - '&CAC F11'
+  - '&CAC F12'
+  - CAPS
+  - '&CA A'
+  - '&CA S'
+  - '&CA D'
+  - '&CA F'
+  - '&CA G'
+  - '&CA H'
+  - '&CA J'
+  - '&CA K'
+  - '&CA L'
+  - '&CA SEMI'
+  - '&CA SQT'
+  - {t: ▽, type: trans}
+  - '&CA Z'
+  - '&CA X'
+  - '&CA C'
+  - '&CA V'
+  - '&CSA F1'
+  - Sft+Gui+ `
+  - Gui+ `
+  - '&CA COMMA'
+  - '&CA DOT'
+  - '&CA FSLH'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [51, 52, 55]
   k: ZMK Studio
