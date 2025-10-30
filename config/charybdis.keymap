@@ -27,21 +27,36 @@
         CAC: CAC {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LC(LA(LG(MACRO_PLACEHOLDER)))>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LALT &kp LGUI>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LCTRL &kp LALT &kp LGUI>
+                ;
         };
 
         // Ctrl+Shift+Alt macro
         CSA: CSA {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LC(LS(LA(MACRO_PLACEHOLDER)))>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHIFT &kp LALT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LCTRL &kp LSHIFT &kp LALT>
+                ;
         };
 
         // Ctrl+Alt macro
         CA: CA {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LC(LA(MACRO_PLACEHOLDER))>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LALT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LCTRL &kp LALT>
+                ;
         };
     };
 
