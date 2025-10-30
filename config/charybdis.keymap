@@ -79,7 +79,7 @@
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         scale-multiplier = <1>;
-        scale-divisor = <10>;
+        scale-divisor = <20>;
         y-invert;
     };
 
