@@ -11,6 +11,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
             bindings = <&mo>, <&kp>;
         };
 
@@ -79,7 +80,7 @@
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         scale-multiplier = <1>;
-        scale-divisor = <20>;
+        scale-divisor = <30>;
         y-invert;
     };
 
