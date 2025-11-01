@@ -10,8 +10,8 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <125>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
 
@@ -81,6 +81,7 @@
         y-input-code = <INPUT_REL_WHEEL>;
         scale-multiplier = <1>;
         scale-divisor = <30>;
+        acceleration-exponent = <0>;
         y-invert;
     };
 
