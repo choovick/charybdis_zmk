@@ -62,7 +62,7 @@
     };
 
     trackball_listener {
-        compatible = "zmk,input-behavior-listener";
+        compatible = "zmk,input-listener";
         device = <&vtrackball>;
         layers = <0 1 2 3 4>;
         evt-type = <INPUT_EV_REL>;
@@ -73,7 +73,7 @@
     };
 
     scroll_listener {
-        compatible = "zmk,input-behavior-listener";
+        compatible = "zmk,input-listener";
         device = <&vtrackball>;
         layers = <5>;
         evt-type = <INPUT_EV_REL>;
@@ -85,7 +85,7 @@
     };
 
     sniping_listener {
-        compatible = "zmk,input-behavior-listener";
+        compatible = "zmk,input-listener";
         device = <&vtrackball>;
         layers = <6>;
         evt-type = <INPUT_EV_REL>;
