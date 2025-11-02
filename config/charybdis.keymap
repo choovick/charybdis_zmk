@@ -68,8 +68,8 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <2>;
+        scale-multiplier = <5>;
+        scale-divisor = <1>;
     };
 
     scroll_listener {
@@ -79,8 +79,8 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
-        scale-multiplier = <6>;
-        scale-divisor = <180>;
+        scale-multiplier = <1>;
+        scale-divisor = <1>;
         y-invert;
     };
 
