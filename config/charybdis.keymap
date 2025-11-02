@@ -77,7 +77,7 @@
         device = <&vtrackball>;
         layers = <5>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;
+        // x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         scale-multiplier = <6>;
         scale-divisor = <180>;
