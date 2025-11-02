@@ -61,40 +61,6 @@
         };
     };
 
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&vtrackball>;
-        layers = <0 1 2 3 4>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <4>;
-        scale-divisor = <1>;
-    };
-
-    scroll_listener {
-        compatible = "zmk,input-listener";
-        device = <&vtrackball>;
-        layers = <5>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;
-        y-input-code = <INPUT_REL_WHEEL>;
-        // scale-multiplier = <1>;
-        // scale-divisor = <4>;
-        // y-invert;
-    };
-
-    sniping_listener {
-        compatible = "zmk,input-listener";
-        device = <&vtrackball>;
-        layers = <6>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        // scale-multiplier = <1>;
-        // scale-divisor = <1>;
-    };
-
     combos {
         compatible = "zmk,combos";
         // Studio Unlock Combo keys 51, 52, 55. all three keys on the right half thumb cluster

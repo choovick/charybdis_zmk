@@ -1,5 +1,14 @@
 #include "charybdis.dtsi"
 #include "charybdis_pmw3610.dtsi"
+#include <behaviors/input_processors.dtsi>
+
+#define DEF 0
+#define POINTER 1
+#define LOWER 2
+#define RAISE 3
+#define SYMBOLS 4
+#define SCROLL 5
+#define SNIPING 6
 
 // The matrix transform is 6 columns over because the left half is 6 columns wide.
 &default_transform {
@@ -37,8 +46,38 @@
 
 // https://github.com/badjeff/zmk-pmw3610-driver
 / {
-  trackball_listener {
-    compatible = "zmk,input-listener";
+  vtrackball: virtual_input_trackball {
+    compatible = "zmk,virtual-input";
+  };
+
+  input_relay_config_trackball {
+    compatible = "zmk,split-peripheral-input-relay";
     device = <&trackball>;
+    relay-channel = <111>;
+  };
+
+  trackball_listener: trackball_listener {
+    compatible = "zmk,input-listener";
+    device = <&vtrackball>;
+    
+    // Sniping mode - slow precise movement
+    snipe {
+      layers = <SNIPING>;
+      input-processors = <&zip_xy_scaler 1 8>;
+    };
+    
+    // Scroll mode - convert movement to scroll
+    scroll {
+      layers = <SCROLL>;
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                         <&zip_xy_scaler 1 4>,
+                         <&zip_xy_to_scroll_mapper>;
+    };
+    
+    // Normal cursor movement
+    move {
+      layers = <DEF POINTER LOWER RAISE SYMBOLS>;
+      input-processors = <&zip_xy_scaler 4 1>;
+    };
   };
 };
