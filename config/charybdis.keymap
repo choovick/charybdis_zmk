@@ -79,9 +79,9 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
-        scale-multiplier = <1>;
-        scale-divisor = <4>;
-        y-invert;
+        // scale-multiplier = <1>;
+        // scale-divisor = <4>;
+        // y-invert;
     };
 
     sniping_listener {
@@ -91,8 +91,8 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <1>;
+        // scale-multiplier = <1>;
+        // scale-divisor = <1>;
     };
 
     combos {
