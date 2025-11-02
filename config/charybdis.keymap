@@ -79,9 +79,8 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
-        scale-multiplier = <1>;
-        scale-divisor = <30>;
-        acceleration-exponent = <0>;
+        scale-multiplier = <3>;
+        scale-divisor = <50>;
         y-invert;
     };
 
